@@ -1,0 +1,84 @@
+h1 {
+    color: red;
+}
+
+.panel{
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 36px 1px #21202078;
+}
+
+.panel-heading h2{
+    color: white;    
+}
+
+.todo{
+    background: lightblue;
+    margin: 2px;
+    font-size: 1.6em;
+    color: white;
+}
+
+
+.todo:hover{
+    opacity: 0.8;
+    transition: 0.2s all;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.panel-body{
+    padding: 0;
+}
+
+.todo-right span{
+    padding: 19px;
+    position: relative;
+    top: 0px;
+}
+
+.todo-right span:hover{
+    background: white;
+    color: lightblue;
+    padding: 19px;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.todo-left{
+    padding: 19px;
+}
+
+.add-message-input{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.add-message-input input{
+    width: 70%;
+    height: 40px;
+    border-radius: 0;
+    background-color: lightblue;
+    color: white;
+    border-color: white;
+    border-bottom-color: transparent;
+}
+
+.add-message-input input::-webkit-input-placeholder { /* Chrome */
+  color: white;
+}
+
+
+.add-message-input button{
+    width: 70%;
+    height: 40px;
+    border-radius: 0;
+    background-color: lightblue;
+    border-color: white;
+}

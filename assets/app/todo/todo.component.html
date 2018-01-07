@@ -1,0 +1,30 @@
+ <form (ngSubmit)="addMessage(f)" #f="ngForm" ngNativeValidate>
+   <div class="panel panel-default panel-info">
+        <div class="panel-heading text-center">
+            <h2>TODO LIST</h2>
+        </div>
+        <div class="panel-body">
+            <div *ngFor='let message of messages; let i = index'>
+                <div class="todo flex" [ngStyle]="{'background-color': message.color ? ('#de5c5c'):('lightblue')}" (click)="updateMessage(message, f)">
+                    <div class="todo-left">
+                    {{message.content}}
+                    </div>
+
+                    <div class="todo-right" (click)='deleteMessage(i)'>
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-footer">
+            <div class="form-group add-message-input">
+              <input type="text" placeholder="Add a message" class="form-control" [ngModel]='message_content' name="content" required>
+
+              <button class="btn btn-md btn-info" type="submit">SAVE</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
